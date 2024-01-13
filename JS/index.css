@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(23, 4, 42, 0.645);
+  background-image: url("../images/yiqun-tang-3o7O_6fi7Qc-unsplash.jpg");
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  color: rgb(204, 178, 230);
+  width: 95%;
+  max-width: 450px;
+  background-color: rgba(244, 242, 245, 0.251);
+  border: 2px solid rgba(255, 255, 255, 0.515);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+p span {
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  padding: 0.8rem 0.3rem; /* COMMENT */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgb(174, 137, 212);
+  border-bottom: 1px solid rgba(175, 170, 170, 0.545);
+}
+
+button {
+  background-color: rgba(60, 6, 115, 0.53);
+  border: none;
+  color: rgb(219, 194, 243);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+}
+
+.wrapper {
+  background-color: rgba(255, 0, 0, 0.216);
+}

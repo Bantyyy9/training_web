@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --Brightorange: hsl(31, 77%, 52%);
+  --Darkcyan: hsl(184, 100%, 22%);
+  --Verydarkcyan: hsl(179, 100%, 13%);
+  --Transparentwhite: hsla(0, 0%, 100%, 0.75);
+  --Verylightgray: hsl(0, 0%, 95%);
+}
+
+body {
+  background-color: var(--Verylightgray);
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  color: var(--Verylightgray);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: var(--Transparentwhite);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  background-color: var(--Verylightgray);
+  border: 1px white solid;
+  border-radius: 20rem;
+  padding: 0.5rem 1rem;
+}
+a:hover {
+  color: var(--Transparentwhite);
+  background-color: inherit;
+}
+
+img {
+  width: 50px;
+}
+
+section {
+  width: 85%;
+  /* padding: 2rem; */
+  margin-inline: auto;
+  margin-block: 4rem;
+}
+.column {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sedans {
+  background-color: var(--Brightorange);
+}
+.bo {
+  color: var(--Brightorange);
+}
+.suvs {
+  background-color: var(--Darkcyan);
+}
+.dc {
+  color: var(--Darkcyan);
+}
+.luxury {
+  background-color: var(--Verydarkcyan);
+}
+.vdc {
+  color: var(--Verydarkcyan);
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    display: flex;
+    /* min-height: 375px; */
+  }
+}

@@ -1,0 +1,494 @@
+/* h1 {
+  background-color: blueviolet;
+  color: white;
+} */
+
+/*single-line comment */
+/*
+
+sda
+sdfas
+asdfasd
+adfads
+asdfasd
+multi-line
+
+*/
+
+/*UNIVERSAL SELECTOR*/
+/* 
+* {
+  border: 1px solid green;
+} */
+
+/*BASIC SELECTORS -> TYPE, CLASS, ID */
+/* type selector */
+/* ol {
+  background-color: red;
+}
+p {
+  color: blueviolet;
+}
+
+li {
+  color: orangered;
+} */
+
+/* id & class selector */
+/* #cover {
+  background-color: red;
+} */
+
+/* .heading {
+  background-color: crimson;
+}
+
+.h1{
+
+}
+h1{}
+
+body{}
+#body{} */
+
+/* COMBINATORY SELECTOES  */
+/* child selectors(general & direct)  */
+/* h2 {
+  background-color: red;
+} */
+
+/* el1 el2 {
+
+} */
+/* el1 el2 el3 el4 el5{} */
+/* section h2 {
+  background-color: red;
+}
+section > h2 {
+  background-color: green;
+} */
+
+/* sibling selectors(general & direct) */
+/* section ~ h1 {
+  color: red;
+}
+section + h1 {
+  color: blue;
+} */
+
+/* or/and selectors */
+
+/* section ~ h1.x,
+input,
+textarea,
+span {
+  color: red;
+} */
+
+/* .a.c{
+
+}
+
+button.a.c{} */
+
+/* ul.a.d.x#k {
+  background-color: yellowgreen;
+} */
+
+/* ATTRIBUTE SELECTOR */
+/* [required] {
+  background: red;
+  accent-color: red;
+} */
+
+/* button div[name="k"] {
+  background-color: red;
+} */
+
+/*EXTRA SELECTORS */
+/* form:hover {
+  background-color: red;
+} */
+
+/* section:nth-of-type(3) {
+  background-color: red;
+} */
+
+/* tr:nth-child(odd) {
+  background-color: rgb(247, 247, 195);
+}
+tr:nth-of-type(2n + 3) {
+  background-color: rgb(254, 200, 200);
+} */
+
+/* tr:is(tr:first-of-type) {
+  background-color: red;
+}
+
+form :where(button) {
+  color: red;
+} */
+
+/* VARIABLES */
+
+/* selector{
+   creating a variable 
+  --variable-name: value;
+  --variable_name: value;
+  --_name1: value1;
+  --_name2: value2;
+
+  use a variable
+  background-color: var(--variable-name);
+
+} */
+
+/* html {
+}
+
+:root {
+  --font: arial;
+  font-family: var(--font);
+}
+
+body {
+  --p1: rgb(178, 178, 250);
+}
+
+section {
+  --bg: blue;
+
+  background-color: var(--bg);
+  --p1: red;
+}
+
+h2 {
+  color: var(--p1);
+} */
+/* absolute units -> px
+relative units -> em rem % vh vw  fr */
+
+/* html {
+  /* font-size: 12px; */
+/* body {
+  font-size: 20px;
+}
+
+.test {
+  font-size: 10px;
+  background-color: red;
+  width: 80rem;
+} */
+
+/* .test {
+  background-color: red;
+  width: 300px;
+}
+
+.test h3 {
+  background-color: yellow;
+  width: 70vmin;
+} */
+
+/* PROPERTIES */
+
+/* COLOR */
+/* NAMED -> red blue green orange */
+/* .test {
+  color: tomato;
+} */
+/* RGB(X,Y,Z)  RGB(X Y Z) <-> RGBA(X,Y,Z,A)
+0-255 A->0-1 */
+/* body {
+  background-color: yellow;
+}
+.test {
+  background-color: rgb(150, 20, 30);
+} */
+/* HEXADECIMAL(0-9A-F) -> #XXX   #XXXX #XXXXXX #XXXXXXXX */
+/* .test {
+  background-color: #2d2266;
+  color: #fff;
+} */
+/* .test {
+  background-color: hsl(350, 67%, 50%);
+} */
+
+/* BACKGROUND */
+/* .test {
+  min-height: 89vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.351),
+      rgba(0, 0, 255, 0.289)
+    ),
+    linear-gradient(to left, transparent 50%, rgba(255, 0, 0, 0.489)),
+    linear-gradient(to left, rgba(153, 205, 50, 0.756) 70%, transparent),
+    url(../images/_imgsz.png);
+  background-image: radial-gradient(120px at 50% 20%, red, blue, yellow, green); 
+  background-color: rgba(33, 3, 3, 0.425);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  background-blend-mode: multiply;
+} */
+
+/* section:first-o
+
+f-type {
+  color: white;
+  background-color: rgba(31, 31, 3, 0.789);
+  height: 80vh;
+  background-image: url(../images/_imgsz.png);
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+} */
+
+/* TEXT PROPERTIES */
+
+/* h1 { */
+/* font-size: 64px; */
+/* font-weight: normal; */
+/* font-family: sans-serif;
+  font-style: unset;
+  text-align: start;
+  text-transform: uppercase;
+  text-decoration: underline double red;
+  text-decoration-line: none;
+  background-color: red; */
+/* color: red; */
+/* box-shadow: xpos ypos [blur] [spread] color; */
+/* box-shadow: 0 -5px 10px rgba(0, 0, 255, 0.381); */
+/* text-shadow: 0 -5px 10px rgba(0, 0, 255, 0.381), 0 5px 5px rgba(0, 0, 0, 0.5),
+    3px 0 3px rgba(0, 0, 0, 0.5); */
+/* letter-spacing: 115px; */
+/* } */
+
+/* section p {
+  background-color: red;
+  line-height: 1.2;
+}
+
+.test1 {
+  background-color: yellowgreen;
+  width: 200px;
+  word-break: break-all;
+  word-wrap: break-word;
+} */
+
+/* .test {
+  background-color: rgb(251, 169, 169);
+  margin: 1rem 3rem 5rem 8rem;
+  padding: 1rem;
+  margin-bottom: 12rem;
+  border: 8px solid yellowgreen;
+  border: 2px dotted rgb(55, 27, 209);
+} */
+
+/* BOX MODEL PROPERTIES */
+
+/* .test {
+  background-color: red;
+  padding: 1rem;
+  border-radius: 0rem 1rem 1rem 1rem;
+  border-top-left-radius: ;
+  width: max-content;
+  max-width: 300px;
+  min-width: 250px;
+  width: 300px;
+  padding-inline: 1rem;
+  height: 300px;
+  overflow: auto;
+  box-sizing: border-box;
+} */
+
+/* .test p {
+  width: 50%;
+} */
+
+/* .test p {
+  width: 600px;
+} */
+
+/* TRANSFORM TRANSITIOIN PROPERTIES */
+/* .test {
+  background-color: red;
+  transform: skewY(2deg);
+}
+
+.test h3 {
+  transition: transform 0.5s;
+  background-color: blue;
+} */
+
+/* .test h3:hover {
+  background-color: yellow;
+  transform: rotate(5deg);
+  transform: translate(50px, -60px);
+  transform: translateX(-20px);
+  transform: scaleY(-1);
+  transform: skew(50deg);
+} */
+
+/* POSITION PROPERTIES */
+/* * {
+  padding: 0;
+  margin: 0;
+} */
+/* .test {
+  position: relative;
+  background-color: red;
+}
+
+.fixed {
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 100;
+  background-color: yellow;
+}
+
+h2 {
+  position: sticky;
+  top: 1rem;
+  background-color: green;
+}
+
+h2.x {
+  background-color: yellow;
+  font-size: 48px;
+  z-index: 56;
+} */
+
+/* .flex {
+  padding: 1rem;
+  height: 300px;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem 2em;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+} */
+
+/* .logo {
+  background-color: green;
+  font-size: 64px;
+}
+nav {
+  background-color: yellow;
+} */
+
+/* .flex > * {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+} */
+
+/* button,
+a {
+  display:;
+} */
+
+/* .flex > * {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.flex div {
+  flex-grow: 3;
+  flex-shrink: 0;
+  background-color: orange;
+  flex-basis: 200px;
+  flex: 0 1 0;
+} */
+
+/* .flex button {
+  flex: 1;
+}
+
+.flex div {
+  flex:
+   2;
+} */
+
+/* .cards { */
+/* height: 500px; */
+/* background-color: red;
+  padding: 1rem;
+  display: grid; */
+/* grid-auto-flow: column; */
+/* grid-template-rows: 30px 50px 160px; */
+/* grid-template-columns: repeat(4, 1fr);
+  gap: 1rem 1.2rem; */
+/* row-gap: 1rem;
+  column-gap: 3rem; */
+/* justify-content: flex-end; */
+/* align-content: center; */
+/* } */
+
+/* .card:nth-of-type(odd) {
+  background-color: olivedrab;
+  margin: 1rem 0;
+} */
+/* .card:nth-of-type(even) {
+  background-color: yellow;
+}
+
+.card:first-of-type {
+  background-color: blue;
+  grid-column: 1 / 3;
+  grid-row: 1/5;
+}
+
+.card:last-of-type {
+  background-color: blueviolet;
+  grid-column: 2/-1;
+  grid-row: 8/9;
+}
+
+.card:nth-of-type(24) {
+  background-color: cyan;
+  grid-column: 2/-1;
+} */
+
+/* @media type conditions{
+
+} */
+
+img {
+  width: 100%;
+}
+
+body {
+  background-color: red;
+}
+@media screen and (max-width: 640px) {
+  body {
+    background-color: yellow;
+  }
+
+  img {
+    border-radius: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    background-color: blue;
+  }
+}

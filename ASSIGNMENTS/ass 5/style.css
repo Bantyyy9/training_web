@@ -1,0 +1,22 @@
+div p {
+  color: blue;
+}
+ol li {
+  color: orangered;
+}
+section table {
+  background-color: rgba(175, 207, 180, 0);
+  color: rgb(115, 108, 7);
+}
+section form {
+  background-color: red;
+}
+ul li {
+  color: red;
+}
+ul li ul li a {
+  color: blueviolet;
+}
+section + h1 {
+  background-color: tomato;
+}

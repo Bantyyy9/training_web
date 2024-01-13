@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --primary: rgb(45, 142, 153);
+  --secondary: rgb(252, 244, 244);
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+body {
+  width: 100%;
+  background-color: rgb(12, 10, 10);
+  color: var(--secondary);
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+header,
+main,
+nav {
+  width: 100%;
+}
+
+header {
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+header > .container {
+  padding-block: 0.5rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1rem;
+}
+
+.message {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  opacity: 0;
+  height: 0;
+  transition: all 0.3s;
+}
+.message.show {
+  opacity: 1;
+  height: 100%;
+}
+.message.info {
+  color: rgb(248, 248, 85);
+}
+.message.win {
+  color: rgb(156, 242, 156);
+}
+.message.loss {
+  color: rgb(252, 184, 217);
+}
+
+nav {
+  background-color: var(--secondary);
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav button {
+  font-size: 0.75rem;
+  padding: 0.5rem 1rem;
+}
+
+nav .counter {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+nav .level {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav button.active {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-block: 2rem;
+}
+
+main button {
+  background-color: red;
+  height: 100px;
+  border-radius: 0.5rem;
+}
+
+main button.clicked {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3) inset,
+    -5px -5px 5px rgba(0, 0, 0, 0.3) inset;
+}

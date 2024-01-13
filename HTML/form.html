@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form in HTML</title>
+  </head>
+  <body>
+    <h1>Simple form and form input controls</h1>
+    <form id="k9" action="https://www.google.com">
+      <label for="k">Username:</label>
+      <input
+        name="user"
+        type=""
+        id="k"
+        placeholder="enter your username"
+        value="default_value"
+        required
+      />
+      <br /><br />
+      <label for="k2">Password:</label>
+      <input
+        name="pass"
+        type="password"
+        id="k2"
+        placeholder="enter your password"
+        required
+      />
+      <br /><br />
+      <input type="submit" value="Register" />
+    </form>
+
+    <h1 id="t1">other form input controls</h1>
+    <form>
+      <input type="button" value="Login" />
+      <input id="t2" type="color" name="" id="" />
+      <input type="date" name="" id="" />
+      <input type="time" name="" id="" />
+      <input type="datetime-local" name="" id="" />
+      <input type="email" name="" id="" />
+      <input type="file" name="" id="" />
+      <input type="number" name="" id="" />
+      <input type="tel" name="" id="" />
+      <button>Register</button>
+    </form>
+
+    <h1>Radio and checkbox</h1>
+    <form action="">
+      <h2>Radio</h2>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" value="m" />
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" value="f" />
+      <label for="other">Other</label>
+      <input type="radio" name="gender" id="other" value="other" />
+      <h2>checkbox</h2>
+      <label for="Red">Red</label>
+      <input type="checkbox" name="colors" id="Red" value="m" />
+      <label for="Blue">Blue</label>
+      <input type="checkbox" name="colors" id="blue" value="f" />
+      <label for="other">Other</label>
+      <input type="checkbox" name="colors" id="other" value="other" />
+      <button>Purchase</button>
+    </form>
+
+    <h1>Select Controls</h1>
+    <label for="country">Country</label><br />
+    <select name="country" id="country">
+      <option value="ng">Nigeria</option>
+      <option value="gh">Ghana</option>
+      <option value="tg">Togo</option>
+      <option value="cm">Cameroon</option>
+    </select>
+    <h1>Textarea</h1>
+    <textarea name="" id="" cols="30" rows="10">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat quas iure repellat aliquam fuga perferendis explicabo facilis obcaecati ratione consequuntur.
+    </textarea>
+    <h1>Group-> Fieldset</h1>
+    <form action="">
+      <fieldset>
+        <fieldset>
+          <legend>Personal Information</legend>
+          <input type="text" placeholder="First Name" /><br />
+          <input type="text" placeholder="Last Name" /><br />
+          <label for="">Date of birth</label
+          ><input type="date" placeholder="Last Name" /><br />
+        </fieldset>
+        <br />
+        <fieldset>
+          <legend>Educational Background</legend>
+          <label for="">Certificate:</label>
+          <select name="" id="">
+            <option value="">SSCE</option>
+            <option value="">ALevel</option>
+            <option value="">Others</option></select
+          ><br />
+          <label for="">Comments</label>
+          <br />
+          <textarea
+            placeholder="Type your comment here"
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+          ></textarea>
+        </fieldset>
+        <br />
+        <button>Create Account</button>
+      </fieldset>
+    </form>
+    <!-- <script>
+      const t1 = document.getElementById("t1");
+      const t2 = document.getElementById("t2");
+
+      t2.onchange = (e) => {
+        console.log(e.target.value);
+        t1.style.color = e.target.value;
+      };
+    </script> -->
+  </body>
+</html>

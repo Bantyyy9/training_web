@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  background-image: url(./images/mobile/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: 1rem;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.bordered {
+  display: grid;
+  place-items: center;
+}
+.header h1 {
+  color: var(--White);
+  font-weight: lighter;
+  border: 1px solid white;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner > img {
+  width: 150px;
+}
+
+.nav {
+  border: none;
+  outline: none;
+  background: inherit;
+  cursor: pointer;
+}
+nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  transition: right 0.3s, opacity 1s;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  background-color: color-mix(in srgb, var(--Black) 90%, transparent);
+  backdrop-filter: blur(2px);
+}
+nav.show {
+  right: 0;
+  left: 0;
+  opacity: 1;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+.modal-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.modal-head img {
+  width: 150px;
+}
+.modal-head button img {
+  width: 20px;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* .container {
+  width: 90%;
+  margin-inline: auto;
+} */
+.container {
+  margin-top: 2rem;
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.second > img {
+  width: 100%;
+  /* height: 200px; */
+}
+.vr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.vr h2 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.vr p {
+  text-align: center;
+  line-height: 1.5rem;
+  color: var(--Very-Dark-Gray);
+  font-size: 15px;
+}
+
+.third {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.third h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.types {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.img {
+  background-image: url(./images/mobile/image-deep-earth.jpg);
+  background-size: cover;
+  height: 100px;
+}
+.img1 {
+  background-image: url(./images/mobile/image-night-arcade.jpg);
+  background-size: cover;
+  height: 100px;
+}
+.img2 {
+  background-image: url(./images/mobile/image-soccer-team.jpg);
+  background-size: cover;
+  height: 100px;
+}
+.img3 {
+  background-image: url(./images/mobile/image-grid.jpg);
+  background-size: cover;
+  height: 100px;
+}
+.img4 {
+  background-image: url(./images/mobile/image-from-above.jpg);
+  background-size: cover;
+  height: 100px;
+}
+.img5 {
+  background-image: url(./images/mobile/image-pocket-borealis.jpg);
+  background-size: cover;
+  height: 100px;
+}
+.img6 {
+  background-image: url(./images/mobile/image-curiosity.jpg);
+  background-size: cover;
+  height: 100px;
+}
+.img7 {
+  background-image: url(./images/mobile/image-fisheye.jpg);
+  background-size: cover;
+  height: 100px;
+}
+
+.text {
+  color: var(--White);
+  padding: 3rem 1rem 1rem;
+}
+.third a {
+  background-color: inherit;
+  border: 1px solid black;
+  width: 100px;
+  margin-inline: auto;
+  padding: 0.5rem 0.1rem;
+  font-size: 15px;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.third a:hover {
+  background-color: black;
+  color: var(--White);
+}
+.last {
+  background-color: black;
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.last p {
+  color: var(--Dark-Gray);
+  text-align: center;
+}
+@media screen and (min-width: 760px) {
+  .header {
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-size: cover;
+    height: 500px;
+    /* padding: 2rem; */
+  }
+  .stay {
+    width: 85%;
+    margin-inline: auto;
+  }
+  .head {
+    display: flex;
+    /* width: 80%;
+    margin-inline: auto; */
+    margin-top: 2rem;
+  }
+  .nav {
+    display: none;
+  }
+  .modal-head {
+    display: none;
+  }
+  nav {
+    position: static;
+    opacity: 1;
+    height: auto;
+    background-color: transparent;
+    z-index: auto;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.85rem;
+  }
+
+  .bordered {
+    max-width: 300px;
+  }
+  .container {
+    width: 85%;
+    margin-inline: auto;
+  }
+}

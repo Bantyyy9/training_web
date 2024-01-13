@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Easy Image Editor</h1>
+      </header>
+      <section>
+        <div class="tools">
+          <div class="filter">
+            <h3>Filters</h3>
+            <div class="grid g-2">
+              <button class="primary">Brightness</button>
+              <button class="bordered">Saturation</button>
+              <button class="bordered">Inversion</button>
+              <button class="bordered">Grayscale</button>
+            </div>
+          </div>
+          <div class="brightness">
+            <div>
+              <span>Brightness</span>
+              <span class="rd">50%</span>
+            </div>
+            <input step="10" min="0" max="100" type="range" value="30" />
+          </div>
+          <div class="transform">
+            <h3>Rotate & Flip</h3>
+            <div class="grid g-4">
+              <button class="bordered">&UpArrow;</button>
+              <button class="bordered">&DownArrow;</button>
+              <button class="bordered">&RightArrow;</button>
+              <button class="bordered">&leftarrow;</button>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <img src="./photo.png" alt="" />
+        </div>
+      </section>
+      <footer>
+        <button class="bordered">reset filters</button>
+        <div>
+          <button class="secondary">choose image</button>
+          <button class="primary">save image</button>
+        </div>
+        <input type="file" accept="image/*" />
+      </footer>
+    </main>
+
+    <script>
+      const chooseImageBtn = document.querySelector("footer button.secondary");
+      const fileInput = document.querySelector("input[type='file']");
+      const rangeInput = document.querySelector("input[type='range']");
+      const rangeDisplay = document.querySelector(".rd");
+
+      const imageHolder = document.querySelector(".image img");
+      const f = new FileReader();
+      rangeDisplay.innerHTML = rangeInput.value + "%";
+      chooseImageBtn.addEventListener("click", () => {
+        fileInput?.click();
+      });
+
+      rangeInput.addEventListener("change", (e) => {
+        rangeDisplay.innerHTML = e.target.value + "%";
+      });
+
+      fileInput.addEventListener("change", (e) => {
+        f.readAsDataURL(e.target.value);
+        f.onloadend((e) => {
+          console.log(e);
+        });
+        console.log(e.target);
+      });
+    </script>
+  </body>
+</html>

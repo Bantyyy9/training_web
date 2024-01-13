@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table in HTML</title>
+  </head>
+  <body>
+    <h1>Simple Table</h1>
+    <table border="1">
+      <caption>
+        Members List
+      </caption>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Khaled</td>
+        <td>Male</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>Farah</td>
+        <td>Female</td>
+        <td>21</td>
+      </tr>
+    </table>
+
+    <h1>Missing Cells</h1>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>School</th>
+        <th>Post</th>
+        <th>Level</th>
+      </tr>
+      <tr>
+        <td>Rasta</td>
+        <td></td>
+        <td>No Post</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Banty</td>
+        <td>OUr School</td>
+        <td></td>
+        <td>900</td>
+      </tr>
+    </table>
+
+    <h1>Merging Rows and Columns</h1>
+    <table border="1">
+      <tr>
+        <td>R1C1</td>
+        <td colspan="3">R1C2</td>
+      </tr>
+      <tr>
+        <td rowspan="3">R2C1</td>
+        <td>R2C2</td>
+        <td>R2C3</td>
+        <td>R2C4</td>
+      </tr>
+      <tr>
+        <td>R3C2</td>
+        <td rowspan="2" colspan="2">R3C3</td>
+      </tr>
+      <tr>
+        <td>R4C2</td>
+      </tr>
+    </table>
+    <br />
+    <h1>Example 2</h1>
+    <table border="1">
+      <tr>
+        <th>First Column</th>
+        <th>Second Column</th>
+        <th>Third Column</th>
+      </tr>
+      <tr>
+        <td>First Cell</td>
+        <td>Second Cell</td>
+        <td>Third Cell</td>
+      </tr>
+      <tr>
+        <td>Forth Cell</td>
+        <td colspan="2">Fifth Cell</td>
+      </tr>
+      <tr>
+        <td>Seventh Cell</td>
+        <td>Eighth Cell</td>
+        <td>Nineth Cell</td>
+      </tr>
+    </table>
+
+    <h1>Example 3</h1>
+    <table border="1">
+      <caption>
+        <em>A test table with merged cells</em>
+      </caption>
+      <tr>
+        <th rowspan="2"></th>
+        <th colspan="2">Average</th>
+        <th rowspan="2">Red eyes</th>
+      </tr>
+      <tr>
+        <th>height</th>
+        <th>weight</th>
+      </tr>
+      <tr>
+        <th>Males</th>
+        <td>1.9</td>
+        <td>0.003</td>
+        <td>40%</td>
+      </tr>
+      <tr>
+        <th>Females</th>
+        <td>1.7</td>
+        <td>0.002</td>
+        <td>43%</td>
+      </tr>
+    </table>
+  </body>
+</html>

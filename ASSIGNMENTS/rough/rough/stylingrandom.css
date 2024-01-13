@@ -1,0 +1,20 @@
+body {
+  min-height: 89vh;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 0, 0, 0.351),
+      rgba(0, 0, 255, 0.289)
+    ),
+    linear-gradient(to left, transparent 50%, rgba(255, 0, 0, 0.489)),
+    linear-gradient(to left, rgba(153, 205, 50, 0) 70%, transparent),
+    url(WhatsApp\ Image\ 2023-07-09\ at\ 00.16.59.jpeg);
+  /* background-image: radial-gradient(120px at 50% 20%, red, blue, yellow, green); */
+  background-color: rgba(33, 3, 3, 0.425);
+  /* background-image:; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  background-blend-mode: multiply;
+}

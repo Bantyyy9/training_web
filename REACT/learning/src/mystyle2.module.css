@@ -1,0 +1,10 @@
+.container {
+  background-color: aquamarine;
+  color: yellowgreen;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.highlight {
+  background-color: orange;
+}

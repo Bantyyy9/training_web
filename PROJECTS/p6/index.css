@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --gray1: rgb(218, 216, 216);
+  --gray2: rgb(215, 212, 212);
+  --blue: rgb(78, 143, 255);
+}
+
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: 90%;
+  max-width: 320px;
+  border: 1px solid var(--gray1);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.display {
+  border: 1px solid var(--gray1);
+  padding: 1rem;
+  border-radius: 0.3rem;
+  text-align: right;
+  overflow-x: auto;
+}
+
+.display h1 {
+  font-size: 2.5rem;
+}
+
+.btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.btns button {
+  border: 1px solid var(--gray1);
+  background-color: rgb(248, 250, 250);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem 0.3rem;
+  font-size: 1.02rem;
+  cursor: pointer;
+  transition: opacity 0.5s, box-shadow 0.3s, transform 0.3s;
+}
+
+.btns .op {
+  background-color: var(--gray2);
+}
+
+.btns .eq {
+  background-color: var(--blue);
+  color: white;
+  grid-row: 2 / span 4;
+  grid-column: 4/-1;
+}
+
+.btns button:hover {
+  opacity: 0.9;
+  font-weight: 600;
+  transform: scale(1.03);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05), 0 -3px 3px rgba(0, 0, 0, 0.03);
+}
+
+.notification {
+  position: fixed;
+  top: 1rem;
+  right: -100%;
+  background-color: rgb(237, 197, 197);
+  color: rgb(137, 6, 50);
+  padding: 1.5rem 1rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 88;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  /* transition: right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); */
+}
+
+.notification p {
+  font-size: 12px;
+}
+
+.notification button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.notification.show {
+  animation: jiggle 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes jiggle {
+  50% {
+    right: 60px;
+  }
+  to {
+    right: 0;
+  }
+}

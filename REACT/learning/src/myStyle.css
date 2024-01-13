@@ -1,0 +1,32 @@
+/* normal css */
+/* css modules */
+
+/* .spin {
+  animation: logo-spin linear infinite;
+} */
+
+.jump-a {
+  animation-duration: 5s;
+  animation-direction: alternate;
+}
+
+.items {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.items a {
+  background-color: red;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.items a:hover {
+  color: wheat;
+  background-color: color-mix(in srgb, red 80%, white);
+  box-shadow: 0 5px 2px rgb(0 0 0 / 20%);
+}

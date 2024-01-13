@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-image: url(./image-restaurant.jpg),
+    linear-gradient(to bottom right, rgb(229, 169, 229), purple);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background-blend-mode: multiply;
+  color: white;
+}
+
+section:first-of-type {
+  background-color: rgba(128, 0, 128, 0.574);
+  padding: 1rem;
+  border-radius: 0.7rem;
+  min-width: 300px;
+  max-width: 500px;
+  /* filter: ; */
+  backdrop-filter: blur(3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+section:first-of-type > * {
+  max-width: 80%;
+  margin-inline: auto;
+}
+
+section:first-of-type a {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+section:first-of-type a span {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  display: block;
+  border-radius: 30%;
+  animation: Jug 5s cubic-bezier(0.2, 0.135, 0.3, 0.86) infinite alternate;
+}
+
+form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border: none;
+  border-bottom: 1px solid rgb(234, 234, 105);
+  outline: none;
+}
+
+button {
+  --side: to left;
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  background-image: linear-gradient(
+    var(--side),
+    rgb(182, 143, 250),
+    rgb(112, 19, 183)
+  );
+  color: white;
+}
+
+button:hover {
+  --side: to right;
+}
+
+section:last-of-type {
+  text-align: center;
+}
+
+section:last-of-type div {
+  margin-top: 1rem;
+}
+
+section:last-of-type a:hover {
+  color: rgb(234, 234, 105);
+  opacity: 0.7;
+}
+
+@keyframes Jug {
+  0% {
+    background-color: rgb(103, 36, 228);
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+    background-color: rgb(248, 248, 126);
+  }
+
+  100% {
+    transform: translateY(0);
+    background-color: rgb(168, 39, 168);
+  }
+}

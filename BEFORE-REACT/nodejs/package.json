@@ -1,0 +1,11 @@
+{
+  "name": "My Application",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "key": "command"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

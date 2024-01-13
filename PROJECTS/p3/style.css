@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+body {
+  background-color: var(--Lightgrayishblue);
+  color: var(--Verydarkblackishblue);
+}
+
+main {
+  padding: 3rem 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.quote {
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transition-delay: 1s;
+}
+
+.quote:hover {
+  transform: scale(1.05);
+  transition-delay: 0s;
+}
+
+.quote span {
+  opacity: 0.5;
+  font-size: 13px;
+}
+
+.quote p {
+  opacity: 0.7;
+  font-size: 13px;
+}
+
+.text-white {
+  color: white;
+}
+
+.user-info {
+  display: flex;
+  gap: 0.5rem;
+}
+.user-info img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--Moderateviolet);
+}
+
+.quote.text-white .user-info img {
+  border-color: white;
+}
+
+.bg-primary {
+  background-color: var(--Moderateviolet);
+}
+
+.bg-secondary {
+  background-color: var(--Verydarkgrayishblue);
+}
+.bg-dark {
+  background-color: var(--Verydarkblackishblue);
+}
+
+.bg-quote {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-size: 85px 82px;
+  background-position: 85% 10px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    margin-inline: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quote:nth-of-type(2) {
+    max-height: 250px;
+  }
+  .quote:nth-of-type(4) {
+    margin-top: -130px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main {
+    max-width: 1200px;
+    margin-inline: auto;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .quote:first-of-type {
+    grid-column: 1/3;
+  }
+  .quote:nth-of-type(2) {
+    max-height: unset;
+  }
+  .quote:nth-of-type(4) {
+    margin-top: 0;
+    grid-column: 2/4;
+  }
+  .quote:last-of-type {
+    grid-row: 1 / span 2;
+    grid-column: 4/5;
+  }
+}
