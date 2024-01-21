@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="flex justify-between max-w-2xl mx-auto w-full p-5  md:px-0 border-b">
+    <header className="flex justify-between w-full max-w-2xl p-5 mx-auto border-b md:px-0">
       <Logo />
       <Navbar />
     </header>
@@ -16,7 +16,7 @@ const Logo = () => {
   return (
     <Link
       to="/"
-      className="bg-green-500 text-green-50 grid place-items-center h-8 w-8 rounded-full"
+      className="grid w-8 h-8 bg-green-500 rounded-full text-green-50 place-items-center"
     >
       L
     </Link>
@@ -36,7 +36,7 @@ const allNavLinks = [
 
 const Navbar = () => {
   return (
-    <nav className="flex gap-5 items-center">
+    <nav className="flex items-center gap-5">
       {allNavLinks.map((link) => (
         <NavLink
           key={link.to}
@@ -46,6 +46,7 @@ const Navbar = () => {
           {link.title}
         </NavLink>
       ))}
+      <button>Upload</button>
     </nav>
   );
 };

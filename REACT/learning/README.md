@@ -19,6 +19,15 @@ SPA - SINGLE PAGE APPLICATION
 
 1. API
 2. Hooks
+   - Built-in Hooks
+      - useState
+      - useEffect
+      - userRef
+      - useContext
+      - useReducer
+      - useMemo
+      - useCallback
+   - Custom Hooks
 3. State Management
 4. Component Library
 5. Side Projects
