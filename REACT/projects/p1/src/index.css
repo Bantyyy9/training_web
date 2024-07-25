@@ -19,6 +19,7 @@ button {
   cursor: pointer;
   transition: background-color 0.5s, color 0.5s;
 }
+
 html,
 body,
 #root {
@@ -32,11 +33,9 @@ body,
 }
 
 .card {
-  background-image: linear-gradient(
-    to bottom right,
-    var(--DarkBlue),
-    var(--VeryDarkBlue) 75%
-  );
+  background-image: linear-gradient(to bottom right,
+      var(--DarkBlue),
+      var(--VeryDarkBlue) 75%);
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.3);
   width: 90%;
   max-width: 400px;
@@ -122,4 +121,137 @@ button.submit:hover {
   padding: 0.3rem 1rem;
   border-radius: 1rem;
   color: color-mix(in srgb, var(--Orange) 75%, white);
+}
+
+
+
+.card {
+  background: var(--Orange);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .75rem;
+  flex-direction: column;
+  color: black
+}
+
+
+div:has(.list-item) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+  margin-inline: auto;
+}
+
+.list-item {
+  background: var(--Orange);
+  border-radius: .5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  opacity: .8
+}
+
+.list-item>* {
+  cursor: pointer;
+
+}
+
+.list-item label {
+  flex: 1;
+  color: white;
+  height: 100%;
+}
+
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+
+}
+
+.links a {
+  text-decoration: none;
+  color: orange;
+}
+
+.links a:hover {
+  opacity: .5
+}
+
+
+.auth-layout {
+  display: flex;
+  border-radius: 1rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  min-height: 50vh;
+}
+
+.auth-layout .left {
+  flex: 1;
+  background: url("https://media.greatbigphotographyworld.com/wp-content/uploads/2014/11/Landscape-Photography-steps.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.auth-layout .left footer {
+  font-size: .75rem;
+}
+
+.auth-layout .right {
+  flex: 1;
+  background: white;
+  padding: 1rem;
+}
+
+
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-page form {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.auth-page input {
+  border: 1px solid var(--Orange);
+  padding: .75rem .5rem;
+  border-radius: .25rem;
+}
+
+.auth-page form button {
+  background-color: var(--Orange);
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+
+}
+
+.auth-page .link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: bisque;
 }
