@@ -5,7 +5,9 @@ import {
   RouterProvider,
   Link,
   Outlet,
+  useParams,
 } from "react-router-dom";
+import HooksInReact from "./Hooks";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,16 @@ const router = createBrowserRouter([
     element: <BlogsPage />,
   },
   {
+    path: "/blogs/:id",
+    element: <BlogsPage />,
+  },
+  // {
+  //   path: "/home/:user" //   /home/banty   /home/rasta   /home/an
+  // },
+  // {
+  //   path: "/:user" //   /banty /rasta /home /school  /user
+  // },
+  {
     path: "/auth",
     element: <AuthPage />,
     children: [
@@ -24,7 +36,7 @@ const router = createBrowserRouter([
         index: true,
         element: (
           <div>
-            <h1 style={{color: "var(--Orange)"}}>Auth</h1>
+            <h1 style={{ color: "var(--Orange)" }}>Auth</h1>
             <div>
               <Link to="/auth/login">Login Here</Link> <br />
               <Link to="/auth/signup">Signup Here</Link>
@@ -50,6 +62,16 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignupPage />,
+  },
+
+  {
+    path: "/dynamic/:user/:area", //  /dynamic/rasta/banty
+    element: <DynamicPage />,
+  },
+
+  {
+    path: "/hooks",
+    element: <HooksInReact />,
   },
 
   {
@@ -94,8 +116,11 @@ function HomePage() {
         <div className="links">
           <a href="/blogs">Blogs page</a>
           <Link to="/blogs">Blogs page</Link>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Signup</Link>
+          <Link to="/auth">Auth</Link>
+          <Link to="/auth/login">Login</Link>
+          <Link to="/auth/signup">Signup</Link>
+          <Link to="/signup">Signup 2</Link>
+          <Link to="/hooks">Hooks in React</Link>
         </div>
       </div>
     </div>
@@ -154,26 +179,52 @@ function AuthPage() {
 }
 
 function BlogsPage() {
+  const params = useParams();
+
+  console.log(params);
+
+  const blogs = {
+    "blog-1": "AI in Diagnostics: Explore how machine learning algorith",
+    "blog-2":
+      "Drug Discovery: Learn how AI accelerates drug development by predicting potential compounds and optimizing clinical trials.",
+    "blog-3":
+      "Patient Care: Discover chatbots and virtual assistants that enhance patient communication and streamline administrative tasks.",
+    "blog-4":
+      "Bias and Fairness: Discuss the importance of addressing bias in AI algorithms to prevent discriminatory outcomes.",
+  };
+
   return (
     <div>
       <h1>Blogs Page</h1>
 
       <div>
-        <h2>Blog Title</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          repellat asperiores adipisci dolorum odit ipsum. Sed, enim.
-          Praesentium quod dicta fugit facere, labore excepturi minus ipsa
-          repudiandae quasi repellendus nemo cupiditate mollitia voluptate
-          eligendi alias?
-        </p>
+        <h2>Blog Title for {params.id} </h2>
+        <p>{blogs[params.id] || "No Blog data"}</p>
         <div className="links">
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Signup</Link>
+          <Link to="/auth/login">Login</Link>
+          <Link to="/auth/signup">Signup</Link>
           <Link to="/">Homepage</Link>
+          <Link to="/blogs/blog-1">Blog 1</Link>
+          <Link to="/blogs/blog-2">Blog 2</Link>
+          <Link to="/blogs/blog-3">Blog 3</Link>
+          <Link to="/blogs/blog-4">Blog 4</Link>
         </div>
       </div>
     </div>
+  );
+}
+
+function DynamicPage() {
+  const params = useParams();
+  console.log(params);
+  return (
+    <h1>
+      Dynamic Page
+      <br />
+      {params.area?.toUpperCase()}
+      <br />
+      {params.user?.toUpperCase()}
+    </h1>
   );
 }
 

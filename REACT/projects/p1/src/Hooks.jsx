@@ -1,5 +1,5 @@
 // import { Component } from "react";
-import { Component, useEffect, useState } from "react";
+import { Component, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 const HooksInReact = () => {
@@ -53,10 +53,12 @@ const HooksInReact = () => {
 export default HooksInReact;
 
 function Examples() {
+  const [state, setState] = useState(false);
   return (
     <div className="">
+      <UseStateHook />
       {/* <UseEffectHook /> */}
-      {/* <UseStateHook /> */}
+      {/* <UseRefHook /> */}
     </div>
   );
 }
@@ -89,26 +91,27 @@ function UseStateHook() {
 function UseEffectHook() {
   const [count, setCount] = useState(0);
   const [name, setName] = useState("");
-  //   console.log("Before Effect");
+  // console.log("Before Effect");
   // useEffect(callback)
   // useEffect(() => {
   //   console.log("UseEffectHook called");
   // });
-  //   console.log("After Effect");
+  // console.log("After Effect");
   //* useEffect(callback,[deps])
-  useEffect(() => {
-    console.log("UseEffectHook called once");
-  }, []);
-  //   useEffect(() => {
-  //     console.log("UseEffectHook called once");
-  //   }, [name]);
+  // useEffect(() => {
+  //   console.log("UseEffectHook called once");
+  // }, []);
+  // useEffect(() => {
+  //   console.log("UseEffectHook called once");
+  // }, [count]);
 
-  //   useEffect(() => {
-  //     console.log("Component mount");
-  //     return () => {
-  //       console.log("Component will unmount");
-  //     }; //will get called anything the component will be destroyed
-  //   },[]);
+  useEffect(() => {
+    console.log("Component mount");
+
+    return () => {
+      console.log("Component will unmount");
+    }; //will get called anything the component will be destroyed
+  }, []);
 
   const increment = () => setCount(count + 1);
 
@@ -124,7 +127,29 @@ function UseEffectHook() {
     <div>
       <h1 onClick={increment}>UseEffect Hook Example {count}</h1>
       <p>{count > 5 ? "above" : "below"}</p>
+      {count > 5 && <p onClick={() => setCount(count - 1)}>testing</p>}
       <button onClick={changeName}>Change Name</button>
+    </div>
+  );
+}
+
+function UseRefHook() {
+  const [open, setOpen] = useState(false);
+  const inputRef = useRef();
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
+  const toggle = () => {
+    setOpen(!open);
+  };
+  return (
+    <div className="hook-use-ref">
+      <h1>Use Ref</h1>
+      <div className={`search-box-wrapper ${open ? "open" : ""}`}>
+        <button onClick={toggle}>+</button>
+        <input ref={inputRef} type="search" />
+      </div>
     </div>
   );
 }
