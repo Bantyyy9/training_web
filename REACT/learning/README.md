@@ -10,23 +10,23 @@ SPA - SINGLE PAGE APPLICATION
 4. handling event
 5. What are states
 6. Conditional Rendering
-7. Rending of a list
+7. Rendering of a list
 8. Mini Project
 9. Routing
 10. Side Project
 
-## Intermidiate React
+## Intermediate React
 
 1. API
 2. Hooks
    - Built-in Hooks
-      - useState
-      - useEffect
-      - userRef
-      - useContext
-      - useReducer
-      - useMemo
-      - useCallback
+     - useState
+     - useEffect
+     - userRef
+     - useContext
+     - useReducer
+     - useMemo
+     - useCallback
    - Custom Hooks
 3. State Management
 4. Component Library
