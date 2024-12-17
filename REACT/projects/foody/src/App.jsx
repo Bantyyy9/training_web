@@ -1,11 +1,15 @@
+import Carts from "./components/Carts";
+import ProductsList from "./components/ProductsList";
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl text-green text-appRose text-purple-600 bg-purple-300 w-7">
-        Welcome To Foody App
-      </h1>
-    </>
+    <main className="flex flex-col md:flex-row w-full xl:max-w-[1200px] md:items-start mx-auto gap-8 md:gap-5 p-4 xl:py-8">
+      <ProductsList />
+      <Carts />
+    </main>
   );
 }
-
+// md: medium >= 768
+// lg: large >= 1024
+// xl: extra large >= 1280
 export default App;

@@ -19,4 +19,9 @@
       "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
       "Helvetica Neue", sans-serif;
   }
+
+  body,
+  #root {
+    @apply w-full min-h-screen bg-appRose-100;
+  }
 }
