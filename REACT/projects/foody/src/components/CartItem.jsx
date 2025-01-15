@@ -1,10 +1,11 @@
-import { useAppUtils } from "../hooks/app-hook";
+import { useAppUtils, useCarts } from "../hooks/app-hook";
 
-const CartItem = () => {
+const CartItem = ({ cart }) => {
   const { formatPrice } = useAppUtils();
-  const title = "Amala + Ewedu";
-  const qty = 2;
-  const price = 6_000;
+  const { removeFromCarts } = useCarts();
+  const title = cart?.name || "--No Name--";
+  const qty = cart?.quantity || 1;
+  const price = cart?.price;
   const total = qty * price;
 
   return (
@@ -19,7 +20,10 @@ const CartItem = () => {
           </p>
         </div>
       </div>
-      <button className="flex items-center justify-center text-center h-6 w-6 rounded-full border  border-appRose-400">
+      <button
+        onClick={() => removeFromCarts(cart?.id)}
+        className="flex items-center justify-center text-center h-6 w-6 rounded-full border  border-appRose-400"
+      >
         <img src="/images/icon-remove-item.svg" alt="Remove" />
       </button>
     </div>

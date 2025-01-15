@@ -1,12 +1,17 @@
-import { useAppUtils } from "../hooks/app-hook";
+import { useAppUtils, useCarts } from "../hooks/app-hook";
+import AddToCartButton from "./AddToCartButton";
+import QuantityBox from "./QuantityBox";
 
-const ProductItem = ({ image, name, category, price }) => {
+const ProductItem = ({ image, name, category, price, id }) => {
   const { formatPrice } = useAppUtils();
+  const { isItemPartOfCart } = useCarts();
 
-  const showBorder = false;
+  const showBorder = isItemPartOfCart(id);
+
+  const item = { id, image, name, category, price };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-10">
       <div className="relative">
         <div
           className={`w-full h-44 overflow-hidden rounded-md border-2 ${
@@ -29,8 +34,12 @@ const ProductItem = ({ image, name, category, price }) => {
             alt={name}
           />
         </div>
-        <div className="p-1 absolute top-[90%] left-1/2 -translate-x-1/2 bg-red-500">
-          action
+        <div className="p-1 absolute top-[85%] left-1/2 -translate-x-1/2 w-[60%]">
+          {showBorder ? (
+            <QuantityBox itemId={id} />
+          ) : (
+            <AddToCartButton item={item} />
+          )}
         </div>
       </div>
       <div className="flex flex-col gap-1">

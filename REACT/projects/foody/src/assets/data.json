@@ -8,7 +8,8 @@
     },
     "name": "Waffle with Berries",
     "category": "Waffle",
-    "price": 6010
+    "price": 6010,
+    "id": "097b98fe9e4ec7"
   },
   {
     "image": {
@@ -19,7 +20,8 @@
     },
     "name": "Vanilla Bean Crème Brûlée",
     "category": "Crème Brûlée",
-    "price": 7200
+    "price": 7200,
+    "id": "04e0a180211af6"
   },
   {
     "image": {
@@ -30,7 +32,8 @@
     },
     "name": "Macaron Mix of Five",
     "category": "Macaron",
-    "price": 2800
+    "price": 2800,
+    "id": "03fed51ccbd55d"
   },
   {
     "image": {
@@ -41,7 +44,8 @@
     },
     "name": "Classic Tiramisu",
     "category": "Tiramisu",
-    "price": 5500
+    "price": 5500,
+    "id": "006026aefca37b"
   },
   {
     "image": {
@@ -52,7 +56,8 @@
     },
     "name": "Pistachio Baklava",
     "category": "Baklava",
-    "price": 4750
+    "price": 4750,
+    "id": "0492aeee18b926"
   },
   {
     "image": {
@@ -63,7 +68,8 @@
     },
     "name": "Lemon Meringue Pie",
     "category": "Pie",
-    "price": 5200
+    "price": 5200,
+    "id": "01aa34eab17da4"
   },
   {
     "image": {
@@ -74,7 +80,8 @@
     },
     "name": "Red Velvet Cake",
     "category": "Cake",
-    "price": 4750
+    "price": 4750,
+    "id": "0689a667627dff"
   },
   {
     "image": {
@@ -85,7 +92,8 @@
     },
     "name": "Salted Caramel Brownie",
     "category": "Brownie",
-    "price": 5420
+    "price": 5420,
+    "id": "0e597292f5c71e"
   },
   {
     "image": {
@@ -96,6 +104,7 @@
     },
     "name": "Vanilla Panna Cotta",
     "category": "Panna Cotta",
-    "price": 6500
+    "price": 6500,
+    "id": "0baed826fc1171"
   }
 ]
