@@ -3,7 +3,6 @@ import CartItem from "./CartItem";
 
 const CartItems = () => {
   const { carts } = useCarts();
-  console.log("My Carts", carts);
 
   return (
     <div className="flex flex-col gap-6 max-h-[300px] overflow-y-auto">

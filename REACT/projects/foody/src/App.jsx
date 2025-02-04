@@ -1,4 +1,5 @@
 import Carts from "./components/Carts";
+import OrderModal from "./components/OrderModal";
 import ProductsList from "./components/ProductsList";
 import { AppProvider } from "./context/AppContext";
 
@@ -9,6 +10,7 @@ function App() {
         <ProductsList />
         <Carts />
       </main>
+      <OrderModal />
     </AppProvider>
   );
 }

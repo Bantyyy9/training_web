@@ -26,6 +26,7 @@ export const useCarts = () => {
   const removeFromCarts = (id) => {
     setCarts((prev) => prev.filter((item) => item.id !== id));
   };
+
   const updateCartItem = (id, type) => {
     //find the item that matches the id
     const item = carts?.find((item) => item.id === id);
@@ -56,6 +57,10 @@ export const useCarts = () => {
     return carts.find((item) => item.id === id)?.quantity || 0;
   };
 
+  const clearCarts = () => {
+    setCarts([]);
+  };
+
   return {
     totalCartItems,
     totalAmount,
@@ -65,5 +70,29 @@ export const useCarts = () => {
     updateCartItem,
     isItemPartOfCart,
     getCartItemQuantity,
+    clearCarts,
+  };
+};
+
+export const useOrder = () => {
+  const { modalOpen, setModalOpen } = useContext(AppContext);
+
+  const { carts, clearCarts } = useCarts();
+  const openOrderConfirmModal = () => {
+    if (carts.length > 0) {
+      setModalOpen(true);
+    } else {
+      alert("Sorry, no item selected");
+    }
+  };
+  const closeOrderConfirmModal = () => {
+    setModalOpen(false);
+    clearCarts();
+  };
+
+  return {
+    modalOpen,
+    openOrderConfirmModal,
+    closeOrderConfirmModal,
   };
 };

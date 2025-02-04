@@ -1,9 +1,10 @@
-import { useAppUtils, useCarts } from "../hooks/app-hook";
+import { useAppUtils, useCarts, useOrder } from "../hooks/app-hook";
 import Button from "./Button";
 
 const CardOrderSummary = () => {
   const { formatPrice } = useAppUtils();
   const { totalAmount } = useCarts();
+  const { openOrderConfirmModal } = useOrder();
 
   return (
     <div className="flex flex-col gap-4">
@@ -20,7 +21,7 @@ const CardOrderSummary = () => {
         </p>
       </div>
 
-      <Button>Confirm Order</Button>
+      <Button onClick={() => openOrderConfirmModal()}>Confirm Order</Button>
     </div>
   );
 };
