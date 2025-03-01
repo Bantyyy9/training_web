@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Inter;
+    src: url("fonts/Inter.ttf");
+  }
+
+  @font-face {
+    font-family: Inconsolata;
+    src: url("fonts/Inconsolata.ttf");
+  }
+
+  @font-face {
+    font-family: Lora;
+    src: url("fonts/Lora.ttf");
+  }
+
+  body {
+    @apply font-inter;
+  }
+
+  body.lora {
+    @apply !font-lora;
+  }
+
+  body.inconsolata {
+    @apply !font-iconsolata;
+  }
+}
