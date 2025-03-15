@@ -17,16 +17,16 @@
     font-family: Lora;
     src: url("fonts/Lora.ttf");
   }
+}
 
-  body {
-    @apply font-inter;
-  }
+body {
+  @apply font-inter dark:bg-appBlack1;
+}
 
-  body.lora {
-    @apply !font-lora;
-  }
+body.lora {
+  @apply !font-lora;
+}
 
-  body.inconsolata {
-    @apply !font-iconsolata;
-  }
+body.inconsolata {
+  @apply !font-inconsolata;
 }

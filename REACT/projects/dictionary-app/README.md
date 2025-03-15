@@ -15,8 +15,8 @@ A dictionary web app created for React Training
 - [x] Setup Routing for the app
 - [x] Setup the Tailwind CSS
 - [x] Setup the Project Assets
-- [ ] Setup the Page Layout
-- [ ] Work on No Definition/Error Components
+- [x] Setup the Page Layout
+- [x] Work on No Definition/Error Components
 - [ ] Work on the Header Component
 - [ ] Work on the Search Box
 - [ ] Work on Api Integration

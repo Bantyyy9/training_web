@@ -1,5 +1,11 @@
+import Message from "../components/Message";
+
 const Error404Page = () => {
-  return <div>Error404Page</div>;
+  return (
+    <div>
+      <Message type="pageNotFound" />
+    </div>
+  );
 };
 
 export default Error404Page;
