@@ -21,6 +21,10 @@ export default {
         appPurple: "#A445ED",
         appRed: "#FF5252",
       },
+      boxShadow: {
+        sLight: "0px 5px 30px 0px rgba(0, 0, 0, 0.10)",
+        sDark: "0px 5px 30px 0px #A445ED",
+      },
     },
   },
   plugins: [],

@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router";
+import Dropdown from "./Dropdown";
+import Logo from "./Logo";
 
 const Header = () => {
   const toggleDarkMode = () => {
@@ -8,12 +9,10 @@ const Header = () => {
   };
   return (
     <header className="py-4 flex items-center justify-between">
-      <Link to="/">
-        <img src="/images/logo.svg" alt="Logo" />
-      </Link>
+      <Logo />
 
       <section className="flex items-center gap-3">
-        dropdown
+        <Dropdown />
         <hr className=" h-8 w-[0.0625rem] bg-appGray2" />
         <div className="flex items-center gap-2">
           <button

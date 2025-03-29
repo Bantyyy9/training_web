@@ -23,10 +23,13 @@ body {
   @apply font-inter dark:bg-appBlack1;
 }
 
-body.lora {
+body.sans-serif {
+  @apply !font-inter;
+}
+body.serif {
   @apply !font-lora;
 }
 
-body.inconsolata {
+body.mono {
   @apply !font-inconsolata;
 }
