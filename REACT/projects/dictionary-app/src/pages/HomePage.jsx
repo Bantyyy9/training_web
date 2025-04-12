@@ -1,5 +1,10 @@
+import { useAppData } from "../context/AppContext";
+
 const HomePage = () => {
-  return <div className="bg-red-500 text-green-800 text-4xl">Aliquam</div>;
+  const { data, loading } = useAppData();
+
+  console.log({ data, loading });
+  return <div className="">Aliquam</div>;
 };
 
 export default HomePage;
