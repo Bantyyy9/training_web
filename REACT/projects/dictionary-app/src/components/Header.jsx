@@ -8,7 +8,7 @@ const Header = () => {
     body.classList.toggle("dark");
   };
   return (
-    <header className="py-4 flex items-center justify-between">
+    <header className="py-4 flex items-center justify-between z-50">
       <Logo />
 
       <section className="flex items-center gap-3">
